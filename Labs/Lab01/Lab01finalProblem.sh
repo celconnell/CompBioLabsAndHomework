@@ -7,5 +7,7 @@
 # in which the top line should be the original headers, 
 # and the other 10 lines should be the last 10 lines of the original data?
 
-head -1 PredPreyData.csv > 2PredPreyData.csv; tail -10 PredPreyData.csv >> 2PredPreyData.csv ; cut -f 2-4 -d, 2PredPreyData.csv >> NewPredPreyData.csv
+head -1 PredPreyData.csv > 2PredPreyData.csv
+tail -10 PredPreyData.csv >> 2PredPreyData.csv
+cut -f 2-4 -d, 2PredPreyData.csv > NewPredPreyData.csv
 rm 2PredPreyData.csv

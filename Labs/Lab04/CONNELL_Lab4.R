@@ -129,8 +129,20 @@ for (i in 2:8) {
 }
 str(co2Data)
 
+#Code below this line doesn't work
 ##8c: Calculate percent change from year i-1 to year i across all years, for each quantity except for year
 
-##8d
+#Parameters
+#co2dataCOPY <- co2Data
 
-##8e
+#For loop. (doesn't work...)
+#for (i in 2:8) {
+#  for (e in 1:263) {
+#    co2dataCOPY[e,i] <- (co2dataCOPY[e,i] / co2dataCOPY[e-1,i]) * 100 
+#  }
+#}
+
+##8d: Use write.csv() to save your new data frame to a file. The file should be named "YearlyPercentChangesInCO2.csv"
+#YearlyPercentChangesinCO2.csv <- write.csv(co2dataCOPY)
+
+##8e: Revisit step 8c, but for each year, calculate the percent change from the first year for which there is non-zero data. 

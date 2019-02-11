@@ -26,11 +26,11 @@ weeklyBalance <- rep(0,eachWeek)
 weeklyBalance[1] <- startingMoney + weeklyAllowance - (packsGum * priceGumPerPack)
 
 #Loop. Starting with WeeklyBalance[2]. This loop takes the remaining balance from the previous week, adds weekly allowance, 
-#subtracts gum expenditure, and store THAT value as the next "i" in WeeklyBalance.
+#subtracts gum expenditure, and store THAT value in WeeklyBalance.
 for ( i in 2:eachWeek ) {
   weeklyBalance[i] <- weeklyBalance[i-1] + weeklyAllowance - (packsGum * priceGumPerPack)
 }
-
+print(weeklyBalance)
 
 
 #lab step #3: Conservation biologist population rate problem
@@ -45,9 +45,10 @@ eachYear <- length(years)
 populationByYear <- rep(0, eachYear)
 populationByYear[1] <- startingPop + (startingPop * populationGrowthRate)
 
-#Loop
+#Loop. Prints the expected population size of a population starting with 2000 individuals shrinking 5% each year, for seven years.
 for (i in 2:eachYear) {
   populationByYear[i] <- populationByYear[i-1] + (populationByYear[i-1] * populationGrowthRate)
+  print(populationByYear[i])
 }
 
 
@@ -64,11 +65,12 @@ totalTime <- length(time)
 abundance <-  rep(0, totalTime)
 abundance[1] <- 2500
 
-#Loop
+#Loop. Runs the discrete-time logistic growth equation 11 times, starting with t=2.
 for (t in 2:totalTime) {
   abundance[t] = abundance[t-1] + ( r * abundance[t-1] * (K - abundance[t-1])/K )
   print(abundance[t])
 }
+print("The predicted value of n[12] is:"); print(abundance[12])
 
 
 #-------------------------------------------------------------PART 2-------------------------------------------------------------
@@ -78,7 +80,7 @@ for (t in 2:totalTime) {
 ##5a: Repeat "0" 18 times
 vec <- rep(0, 18)
 
-##5b: Loop, storing 3 times the ith value of i in its ith spot
+##5b: Loop, storing 3 times the "ith" value of i in its "ith" spot
 for (i in seq(1:18)) {
   vec[i] <- 3 * i
 }
@@ -96,13 +98,13 @@ print(vec2)
 
 
 
-#lab step #6: Fibonacci
+#lab step #6: Fibonacci sequence -- Every number after the first two is the sum of the two preceding ones
 
 #Parameters
 fibonacci <- rep(0,20)
 fibonacci[2] <- 1
 
-#Loop
+#Loop, printing the first 20 numbers of the Fibonacci sequence. starting with 0
 for (i in 3:20) {
   fibonacci[i] <- fibonacci[i-1] + fibonacci[i-2]
 }
@@ -116,15 +118,19 @@ plot(time, abundance)
 
 #-------------------------------------------------------------PART 3-------------------------------------------------------------
 
-#lab step #8: optional challenge problems (5 parts)
+#lab step #8: optional challenge problems (5 parts).
 
 ##8a: Read in data file
 co2Data <- read.csv("CO2_data_cut_paste.csv")
 
-##8b: converting data type from integer to numeric, for all columns except for "Year"
-#
-#
-#for (i in 2:8) {
-#  class(co2Data[,i]) = "numeric"
-#}
-#str(co2Data)
+##8b: converting data type from integer to numeric, for all columns except for "Year".
+for (i in 2:8) {
+  co2Data[,i] <- as.numeric(co2Data[,i])
+}
+str(co2Data)
+
+##8c: Calculate percent change from year i-1 to year i across all years, for each quantity except for year
+
+##8d
+
+##8e

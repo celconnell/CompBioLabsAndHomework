@@ -71,4 +71,53 @@ cat(paste(YearsEmissionsRange))
 
 #-------------------------------------------------------------PART 2-------------------------------------------------------------
 
-    
+#lab step 2.1: Set up parameter values
+
+totalGenerations <- 1000
+initPrey <- 100 	# initial prey abundance at time t = 1
+initPred <- 10		# initial predator abundance at time t = 1
+a <- 0.01 		# attack rate
+r <- 0.2 		# growth rate of prey
+m <- 0.05 		# mortality rate of predators
+k <- 0.1 		# conversion constant of prey into predators
+
+#lab step 2.2: Set up new vectors 
+
+time <- seq(totalGenerations)
+nPrey <- rep(0, totalGenerations) #data storage for nPrey
+nPrey[1] <- 100
+pPred <- rep(0, totalGenerations) #data storage for pPred
+pPred[1] <- 10
+
+#lab step 2.3: write a loop that implements the calculations
+
+for (t in 2:totalGenerations) {
+  nPrey[t] <- nPrey[t-1] + (r * nPrey[t-1]) - (a * nPrey[t-1] * pPred[t-1])
+  pPred[t] <- pPred[t-1] + (k * a * nPrey[t-1] * pPred[t-1]) - (m * pPred[t-1])
+}
+
+#lab step 2.4: Editing loop so that if values are negative, store 0
+
+for (t in 2:totalGenerations) {
+  if (nPrey[t-1] > 0 && pPred[t-1] > 0) {
+  nPrey[t] <- nPrey[t-1] + (r * nPrey[t-1]) - (a * nPrey[t-1] * pPred[t-1])
+  pPred[t] <- pPred[t-1] + (k * a * nPrey[t-1] * pPred[t-1]) - (m * pPred[t-1])
+  } else {
+    nPrey[t] <- 0
+    pPred[t] <- 0
+  }
+}
+
+
+#lab step 2.5: make a plot of the abundances of prey and predators over time
+
+plot(time, nPrey, col="pink", xlab="# of generations", ylab="Abundance")
+lines(time, pPred, col="blue")
+legend("topright", legend=c("Prey abundance", "Predator abundance"), col=c("pink","blue"), lty=1, cex=1)
+
+#lab step 2.6: Creating a matrix of results and export it to a csv file
+
+myResults <- cbind(time, nPrey, pPred)
+colnames(myResults) <- c("TimeStep", "PreyAbundance", "PredatorAbundance")
+write.csv(x = myResults, file="PredPreyResults.csv")
+myResults

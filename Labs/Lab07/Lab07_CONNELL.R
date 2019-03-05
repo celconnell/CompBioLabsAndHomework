@@ -21,6 +21,9 @@ triangleArea(10,9) #executing: a triangle with a base of 10 and height of 9 has 
 
 myAbs <- function(x=NA) {
   for (i in 1:length(x)) {
+    if (any(is.na(x))) {
+      return(cat("warning! NA's found in input. Aborting function."))
+    }
     if (x[i] < 0) {
       x[i] <- (x[i] * -1)
     }

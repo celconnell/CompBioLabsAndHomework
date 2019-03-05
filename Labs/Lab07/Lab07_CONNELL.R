@@ -41,8 +41,7 @@ myAbs(c(1.1, 2, 0, -4.3, 9, -12))
 ##example: fibonacciFunction(5, 0) #this will create a vector of the first 5 values of the Fibonacci sequence, starting with 0
 
 fibonacciFunction <- function(n=NA, startingNumber=NA) {
-  
-# if startingNumber is 0:
+  # if startingNumber is 0:
   if (startingNumber==0) {
     fibonacci <- rep(0, n)
     fibonacci[2] <- 1
@@ -51,6 +50,7 @@ fibonacciFunction <- function(n=NA, startingNumber=NA) {
   } 
     return(fibonacci)
 }
+  #if starting number is 1:
   else if (startingNumber==1) {
     fibonacci <- rep(0, n)
     fibonacci[1] <- 1
@@ -62,7 +62,9 @@ fibonacciFunction <- function(n=NA, startingNumber=NA) {
   }
 }
 
-fibonacciFunction(10,1)
+#testing fibonacciFunction
+
+fibonacciFunction(20, 1)
 
 
 #--------------------------------------------------------------------------------------------------------------------------------------
@@ -87,6 +89,8 @@ myMean <- function(x=NA) {
   return(sum(x) / length(x))
 }
 
+# importing data and testing myMean function
+
 data <- read.csv("DataForLab07.csv")
 myMean(data$x)
 
@@ -107,7 +111,6 @@ sumOfSquares <- function(vectorInput=NA) {
   }
   return(sum(vectorOfSquaredValues))
 }
-
 
 #testing the sumOfSquares function
 

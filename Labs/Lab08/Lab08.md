@@ -29,7 +29,7 @@ This script also writes the data collected from the function into a .csv file. M
 
 ###### example output:
 
-[example output plot]()(ModelingLogisticGrowth.png)
+![example output plot]()(ModelingLogisticGrowth.png)
 
 
 

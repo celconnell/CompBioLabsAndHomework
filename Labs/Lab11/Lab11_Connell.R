@@ -31,6 +31,25 @@ WoodDensityData <- WoodDensityData[-c(removerow), ]
 
 nrow(WoodDensityData)
 
+##5 alternative methods for removing na
+
+#not the NA's, note logical negation with ! :
+noNAdata1 <- originaldata[ !is.na(originaldata$Density), ]
+
+#complete.cases() function
+noNAdata2 <- originaldata[ complete.cases(originaldata), ]
+
+#indexing with netgative integers means remove
+nonNAdata3 <- originaldata[ -which(is.na(originaldata$Denesity)), ]
+
+#in  base R, there is also a specific function
+noNAdata4 <- na.omit(originaldata)
+
+# and in the tidyverse...drop_na allows for more flexibility (only remove the row if 2 columns have na,  or specify the column, etc)
+library("tidyr")
+noNAdata5 <- drop_na(originaldata)
+
+
 
 # Step 5: Dealing with one kind of pseudo-replication
 

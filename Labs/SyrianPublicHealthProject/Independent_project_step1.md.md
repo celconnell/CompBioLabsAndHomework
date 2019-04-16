@@ -51,6 +51,6 @@ Additionally, Elsafti et al. conducted a "chi-squared analysis to identify facto
 
 ## References 
 
-Elsafti AM, van Berlaer G, Al Safadi M, Debacker M, Buyl R, Redwan A, Hubloue I (2016) Children in the Syrian Civil War: the Familial, Educational, and Public Health Impact of Ongoing Violence. Disaster Medicine and Public Health Preparedness 10(06): 874-882. <https://doi.org/10.1017/dmp.2016.165>](https://doi.org/10.1371/journal.pone.0126373)
+Elsafti AM, van Berlaer G, Al Safadi M, Debacker M, Buyl R, Redwan A, Hubloue I (2016) Children in the Syrian Civil War: the Familial, Educational, and Public Health Impact of Ongoing Violence. Disaster Medicine and Public Health Preparedness 10(06): 874-882. [<https://doi.org/10.1017/dmp.2016.165>](https://doi.org/10.1371/journal.pone.0126373)
 
 Elsafti AM, van Berlaer G, Al Safadi M, Debacker M, Buyl R, Redwan A, Hubloue I (2016) Data from: Children in the Syrian civil war: the familial, educational, and public health impact of ongoing violence. Dryad Digital Repository. <https://doi.org/10.5061/dryad.73ff4>

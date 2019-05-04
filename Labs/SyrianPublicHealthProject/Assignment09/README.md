@@ -29,9 +29,9 @@ I created novel graphs depicting some of the descriptive data. I also ran variou
 ### Results and conclusions
 My results are consistent with what the original authors concluded. My chi-squared analyses depicted that although age and gender are not significant predictors of certain health outcomes, the governorate a child lives in is a significant predictor. Specifically, the governorate resided in significantly predicts whether or not a child has access to clean water (p=1.003e-13), whether or not a child shows clinical signs of malnutrition (p < 2.2e-16), whether or not they're receiving education (p < 2.2e-16), and whether or not they have access to a pediatric healthcare provider (p = 2.859e-16). Below are two plots that exemplify this.
 
-![healthcareAccess]
+![healthcareAccess.jpeg]
 
-![Malnutrition]
+![Malnutrition.jpeg]
 
 These data can be used to guide relief efforts and support different regions with what they need, which can provide more pragmatic assistance. Additionally, more selective relief can save time and resources.
 

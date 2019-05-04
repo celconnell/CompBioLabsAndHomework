@@ -27,13 +27,11 @@ They also conducted chi-squared analyses to determine if certain subsets of the 
 I created novel graphs depicting some of the descriptive data. I also ran various chi-squared analyses, using predictors such as age, gender, and governorate, and response variables such as access to safe water, signs of clinical nutrition, whether or not they're in school, and access to a clinical pediatric healthcare provider, to determine if certain sub-populations are more at risk than others. My analysis consists of similar predictors and response variables as the chi-squared analyses conducted by Elsafti et al. I initially wanted to run general linear models but could not since my response variables are categorical.
 
 ### Results and conclusions
-My results are consistent with what the original authors concluded. My chi-squared analyses depicted that although age and gender are not significant predictors of certain health outcomes, the governorate a child lives in is a significant predictor. Specifically, the governorate resided in significantly predicts whether or not a child has access to clean water (p=1.003e-13), whether or not a child shows clinical signs of malnutrition (p < 2.2e-16), whether or not they're receiving education (p < 2.2e-16), and whether or not they have access to a pediatric healthcare provider (p = 2.859e-16). Below are two plots that exemplify this.
+My results are consistent with what the original authors concluded. My chi-squared analyses depicted that although age and gender are not significant predictors of certain health outcomes, the governorate a child lives in is a significant predictor. Specifically, the governorate resided in significantly predicts whether or not a child has access to clean water (p=1.003e-13), whether or not a child shows clinical signs of malnutrition (p < 2.2e-16), whether or not they're receiving education (p < 2.2e-16), and whether or not they have access to a pediatric healthcare provider (p = 2.859e-16). These data can be used to guide relief efforts and support different regions with what they need, which can provide more pragmatic assistance. Additionally, more selective relief can save time and resources. For example, the plots below show that Lattakia has a very high rate of children who do not have access to pediatric healthcare, but also much less children have signs of clinical malnutrition, so relief organizations can focus first on providing primary care pediatricians. 
 
-![healthcareAccess.jpeg]
+![access to healthcare by Governorate](healthcareAccess.jpeg)
 
-![Malnutrition.jpeg]
-
-These data can be used to guide relief efforts and support different regions with what they need, which can provide more pragmatic assistance. Additionally, more selective relief can save time and resources.
+![Malnutrition by governorate](Malnutrition.jpeg)
 
 ## References
 
